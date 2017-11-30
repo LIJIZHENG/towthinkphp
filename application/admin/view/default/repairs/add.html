@@ -1,0 +1,60 @@
+{extend name="public/base" /}
+
+{block name="body"}
+<div class="main-title">
+    <h2>
+        {$info['id']?:'新增'}报修
+    </h2>
+</div>
+<form action="{:url()}" method="post" class="form-horizontal">
+    <input type="hidden" name="pid" value="{$pid}">
+    <div class="form-item">
+        <label class="item-label">姓名<span class="check-tips"></span></label>
+        <div class="controls">
+            <input type="text" class="text input-large" name="name" value="{$info.title|default=''}">
+        </div>
+    </div>
+    <div class="form-item">
+        <label class="item-label">电话<span class="check-tips"></span></label>
+        <div class="controls">
+            <input type="text" class="text input-large" name="tel" value="{$info.url|default=''}">
+        </div>
+    </div>
+    <div class="form-item">
+        <label class="item-label">地址<span class="check-tips"></span></label>
+        <div class="controls">
+            <input type="text" class="text input-large" name="address" value="{$info.url|default=''}">
+        </div>
+    </div>
+    <div class="form-item">
+        <label class="item-label">标题(简述报修问题)<span class="check-tips"></span></label>
+        <div class="controls">
+            <input type="text" class="text input-large" name="title" value="{$info.url|default=''}">
+        </div>
+    </div>
+    <div class="form-item">
+        <label class="item-label">内容<span class="check-tips"></span></label>
+        <div class="controls">
+            <input type="text" class="text input-large" name="content" value="{$info.url|default=''}">
+        </div>
+    </div>
+    <div class="form-item">
+        <label class="item-label">状态是否显示:<span class="check-tips"></span></label>
+        <div class="controls">
+            <input type="radio" class="text input-large" name="status" value="1"/>显示
+            <input type="radio" class="text input-large" name="status" value="0"/>不显示
+        </div>
+    </div>
+     <div class="form-item">
+        <input type="hidden" name="id" value="{$info.id|default=''}">
+        <button class="btn submit-btn ajax-posts" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+        <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+    </div>
+</form>
+{/block}
+{block name="script"}
+<script type="text/javascript" charset="utf-8">
+    //导航高亮
+    highlight_subnav('{:url('index')}');
+</script>
+{/block}

@@ -1,0 +1,117 @@
+{extend name="base/common"/}
+{block name="body"}
+<div class="main-title">
+    <h2>前台报修管理</h2>
+</div>
+
+<div class="cf">
+    <a class="btn" href="{:url('add','pid='.$pid)}">新 增</a>
+    <a class="btn" href="javascript:;">删 除</a>
+    <button class="btn list_sort" url="{:url('sort',array('pid'=>input('get.pid',0)),'')}">排序</button>
+</div>
+
+<div class="data-table table-striped">
+    <table>
+        <thead>
+        <tr>
+            <th class="row-selected">
+                <input class="checkbox check-all" type="checkbox">
+            </th>
+            <th>ID</th>
+            <th>报修人</th>
+            <th>电话</th>
+            <th>地址</th>
+            <th>简述报修问题</th>
+            <!--<th>保修时间</th>-->
+            <th>内容</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {notempty name="list"}
+        {volist name="list" id="repais"}
+        <tr>
+            <td><input class="ids row-selected" type="checkbox" name="" id="" value="{$repairs['id']}"> </td>
+            <td>{$repais.id}</td>
+            <td>{$repais.name}</td>
+            <td>{$repais.tel}</td>
+            <td>{$repais.address}</td>
+            <td><a href="{:url('index?pid='.$repairs['id'])}">{$repais.title}</a></td>
+            <!--<td>{$repais.create_time}</td>-->
+            <td>{$repais.content}</td>
+            <td>{$repais.status}</td>
+            <td>
+                <a class="confirm ajax-get" title="删除" href="{:url('del?id='.$repais['id'])}">删除</a>
+            </td>
+        </tr>
+        {/volist}
+        {else/}
+        <td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td>
+        {/notempty}
+        </tbody>
+    </table>
+</div>
+{/block}
+
+{block name="script"}
+<script type="text/javascript">
+    $(function() {
+        //点击排序
+        $('.list_sort').click(function(){
+            var url = $(this).attr('url');
+            var ids = $('.ids:checked');
+            var param = '';
+            if(ids.length > 0){
+                var str = new Array();
+                ids.each(function(){
+                    str.push($(this).val());
+                });
+                param = str.join(',');
+            }
+
+            if(url != undefined && url != ''){
+                window.location.href = url + '/ids/' + param;
+            }
+        });
+    });
+</script>
+<script>nextHref = $("#next_page a").attr("href");
+// 给浏览器窗口绑定 scroll 事件
+$(window).bind("scroll",function(){
+    // 判断窗口的滚动条是否接近页面底部
+    if( $(document).scrollTop() + $(window).height() > $(document).height() - 10 ) {
+        // 判断下一页链接是否为空
+        if( nextHref != undefined ) {
+            // 显示正在加载模块
+            $("#page_loading").show("slow");
+            // Ajax 翻页
+            $.ajax( {
+                url: $("#page_nav a").attr("href"),
+                type: "POST",
+                success: function(data) {
+                    result = $(data).find("#thumbs .imgbox");
+                    nextHref = $(data).find("#page_nav a").attr("href");
+                    $("#page_nav a").attr("href", nextHref);
+                    $("#thumbs").append(result);
+                    // 把新的内容设置为透明
+                    $newElems = result.css({ opacity: 0 });
+                    $newElems.imagesLoaded(function(){
+                        $container.masonry( 'appended', $newElems, true );
+                        // 渐显新的内容
+                        $newElems.animate({ opacity: 1 });
+                        // 隐藏正在加载模块
+                        $("#page_loading").hide("slow");
+                    });
+
+                }
+            });
+        } else {
+            $("#page_loading span").text("木有了噢，最后一页了！");
+            $("#page_loading").show("fast");
+            setTimeout("$('#page_loading').hide()",1000);
+            setTimeout("$('#page_loading').remove()",1100);
+        }
+    }
+});</script>
+{/block}

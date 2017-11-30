@@ -1,0 +1,57 @@
+<link href="__STATIC__/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="__STATIC__/bootstrap/js/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__STATIC__/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
+{block name="body"}
+<div class="span9">
+    <!-- Contents
+    ================================================== -->
+    <section id="contents">
+        {notempty name="lists"}
+        {volist name="lists" id="notice"}
+        <div class="row">
+            <div class="span2 pull-left">
+                <a href="{:url('Article/detail?id='.$notice['id'])}">
+                    <img class="img-responsive" src="__ROOT__{$notice.cover_id|get_cover_path}" style="width: 150px"/>
+                </a>
+            </div>
+            <div class="span7">
+                <h3><a href="{:url('Article/detail?id='.$notice['id'])}">{$notice.title}</a></h3>
+                <p class="lead">{$notice.description}</p>
+                <span><a href="{:url('Article/detail?id='.$notice['id'])}">查看全文</a> ( 阅读：{$notice.view} )</span>
+                <span class="pull-right">
+                          <span class="author">{$notice.uid|get_username}</span>
+                         <a href="{:url('Article/lists?category='.get_category_name($notice['category_id']))}"> <span>{$notice.create_time}</span></a>
+            </div>
+        </div>
+        <hr/>
+        {/volist}
+        {else/}
+        <td colspan="6" class="text-center">没有内容! </td>
+        {/notempty}
+    </section>
+</div>
+<button id="a" class="btn btn-xs btn-info center-block">获取更多数据</button>
+{/block}
+<script type="text/javascript">
+    var page = 2;
+    $("#a").click(function(){
+        $.getJSON("ajax",{page:page},function (data) {
+            if(data){
+                $(data).appendTo("#contents");
+            }else{
+                alert(1);
+                $("#a").html("没有内容了!");
+            }
+        });
+        page += 1;
+    });
+</script>
