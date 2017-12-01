@@ -1,16 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\WWW\towthinkphp\public/../application/home/view/default/shop\shop.html";i:1511971570;}*/ ?>
-<link href="__STATIC__/bootstrap/css/bootstrap.css" rel="stylesheet">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\WWW\towthinkphp\public/../application/home/view/default/shop\shop.html";i:1512129485;}*/ ?>
+<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
-<script src="__STATIC__/bootstrap/js/html5shiv.js"></script>
+<script src="/static/bootstrap/js/html5shiv.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type="text/javascript" src="__STATIC__/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/static/jquery-1.10.2.min.js"></script>
 <![endif]-->
 <!--[if gte IE 9]><!-->
-<script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
 
 <div class="span9">
     <!-- Contents
