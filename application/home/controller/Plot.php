@@ -82,7 +82,7 @@ class Plot extends Home{
          $member_id=is_login();
          $plot_id = input('plot_id');
          $data = ['member_id'=>$member_id,'plot_id'=>$plot_id];
-         Db::table('member_plot')->insert($data);
+         Db::table('member')->insert($data);
          return 1;
     }
 }

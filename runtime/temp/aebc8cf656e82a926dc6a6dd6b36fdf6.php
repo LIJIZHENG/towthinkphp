@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\WWW\towthinkphp\public/../application/home/view/default/shop\faxian.html";i:1512025779;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\WWW\towthinkphp\public/../application/home/view/default/shop\faxian.html";i:1512038352;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>

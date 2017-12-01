@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\WWW\towthinkphp\public/../application/home/view/default/index\index.html";i:1512027413;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\WWW\towthinkphp\public/../application/home/view/default/index\index.html";i:1512038416;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -42,14 +42,14 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid text-center">
             <div class="col-xs-3">
-                <p class="navbar-text"><a href="http://www.mager.com/public/home/index/index.html" class="navbar-link">首页</a></p>
+                <p class="navbar-text"><a href="http://www.mager.com/home/index/index.html" class="navbar-link">首页</a></p>
             </div><div class="col-xs-3">
-            <p class="navbar-text"><a href="http://www.mager.com/public/home/fuwu/fuwu.html" class="navbar-link">服务</a></p>
+            <p class="navbar-text"><a href="http://www.mager.com/home/fuwu/fuwu.html" class="navbar-link">服务</a></p>
         </div><div class="col-xs-3">
-            <p class="navbar-text"><a href="http://www.mager.com/public/home/my/my" class="navbar-link">发现</a></p>
+            <p class="navbar-text"><a href="http://www.mager.com/home/my/my" class="navbar-link">发现</a></p>
         </div>
             <div class="col-xs-3">
-            <p class="navbar-text"><a href="http://www.mager.com/public/home/my/my" class="navbar-link">我的</a></p>
+            <p class="navbar-text"><a href="http://www.mager.com/home/my/my" class="navbar-link">我的</a></p>
         </div>	</div>
     </nav>
     <!--导航结束-->
@@ -66,7 +66,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-4">
-                        <a href="/public/home/notice/notice.html">
+                        <a href="http://www.mager.com/home/notice/notice.html">
                             <div class="indexLabel label-danger">
                                 <span class="glyphicon glyphicon-bullhorn"></span><br/>
                                 小区通知
@@ -74,7 +74,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="/public/home/serve/serve.html">
+                        <a href="http://www.mager.com/home/serve/serve.html">
                             <div class="indexLabel label-warning">
                                 <span class="glyphicon glyphicon-ok-circle"></span><br/>
                                 便民服务
@@ -82,7 +82,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="/public/home/repair/add/pid/0.html">
+                        <a href="http://www.mager.com/home/repair/add/pid/0.html">
                             <div class="indexLabel label-info">
                                 <span class="glyphicon glyphicon-heart-empty"></span><br/>
                                 在线报修
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="http://www.mager.com/public/home/shop/faxian.html">
+                        <a href="http://www.mager.com/home/shop/faxian.html">
                             <div class="indexLabel label-success">
                                 <span class="glyphicon glyphicon-briefcase"></span><br/>
                                 商家活动
@@ -98,7 +98,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="/public/home/zushou/zushou.html">
+                        <a href="http://www.mager.com/home/zushou/zushou.html">
                             <div class="indexLabel label-primary">
                                 <span class="glyphicon glyphicon-usd"></span><br/>
                                 小区租售
@@ -106,7 +106,7 @@
                         </a>
                     </div>
                     <div class="col-xs-4">
-                        <a href="/public/home/plot/plot.html">
+                        <a href="http://www.mager.com/home/plot/plot.html">
                             <div class="indexLabel label-default">
                                 <span class="glyphicon glyphicon-apple"></span><br/>
                                 小区活动

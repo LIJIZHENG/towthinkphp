@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\WWW\towthinkphp\public/../application/home/view/default/live\live.html";i:1512028559;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\WWW\towthinkphp\public/../application/home/view/default/live\live.html";i:1512032319;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -36,9 +36,9 @@
         <div class="blank"></div>
         <div class="container">
             <ul class="list-group fuwuList">
-                <li class="list-group-item"><a href="/public/home/notice/notice.html" class="text-danger"><span class="iconfont">&#xe604;</span>小区通知</a> </li>
-                <li class="list-group-item"><a href="/public/home/serve/serve.html" class="text-info"><span class="iconfont">&#xe605;</span>便民服务</a></li>
-                <li class="list-group-item"><a href="/public/home/plot/plot.html" class="text-warning"><span class="iconfont">&#xe601;</span>小区活动</a></li>
+                <li class="list-group-item"><a href="/home/notice/notice.html" class="text-danger"><span class="iconfont">&#xe604;</span>小区通知</a> </li>
+                <li class="list-group-item"><a href="/home/serve/serve.html" class="text-info"><span class="iconfont">&#xe605;</span>便民服务</a></li>
+                <li class="list-group-item"><a href="/home/plot/plot.html" class="text-warning"><span class="iconfont">&#xe601;</span>小区活动</a></li>
             </ul>
         </div>
     </div>
