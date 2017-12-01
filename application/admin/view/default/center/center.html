@@ -1,0 +1,75 @@
+{extend name="public/base" /}
+
+{block name="body"}
+	<div class="main-title">
+		<h2>认证管理</h2>
+	</div>
+
+	<div class="cf">
+		<button class="btn ajax-post confirm" url="{:url('del')}" target-form="ids">删 除</button>
+	</div>
+
+	<div class="data-table table-striped">
+		<table>
+			<thead>
+				<tr>
+					<th class="row-selected">
+						<input class="checkbox check-all" type="checkbox">
+					</th>
+					<th>姓名</th>
+					<th>房号</th>
+					<th>关系</th>
+					<th>电话</th>
+					<th>身份证号</th>
+					<th>申请时间</th>
+					<th>状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{notempty name="list"}
+				{volist name="list" id="v"}
+					<tr>
+						<td><input class="ids" type="checkbox" name="id[]" value="{$v.id}" /></td>
+						<td>{$v.name}</td>
+						<td>{$v.num}</td>
+						<td>{$v.relation}</td>
+						<td>{$v.tel}</td>
+						<td>{$v.id_number}</td>
+						<td>{$v.create_time|time_format}</td>
+						<td>{$v.status==1?"未通过":"通过"}</td>
+						<td>
+							<a class="confirm ajax-get" title="处理" href="{:url('edit?id='.$v['id'])}">处理状态</a>
+							<a class="confirm ajax-get" title="删除" href="{:url('del?id='.$v['id'])}">删除</a>
+						</td>
+					</tr>
+				{/volist}
+				{else/}
+				<td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td>
+				{/notempty}
+			</tbody>
+		</table>
+	</div>
+<div>
+</div>
+<div class="page">
+	{$page}
+</div>
+{/block}
+
+{$list->render()}
+{block name="script"}
+<script type="text/javascript">
+    $(function() {
+    	//点击排序
+    	$('.list_sort').click(function(){
+    		var url = $(this).attr('url');
+    		var ids = $('.ids:checked');
+            ids.each(function(){
+                console.debug();
+            });
+    		console.debug(url);
+    	});
+    });
+</script>
+{/block}
