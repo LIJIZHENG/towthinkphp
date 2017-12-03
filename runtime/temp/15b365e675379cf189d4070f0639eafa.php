@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\WWW\towthinkphp\public/../application/home/view/default/index\index.html";i:1512038416;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\WWW\towthinkphp\public/../application/home/view/default/index\index.html";i:1512129283;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -8,8 +8,8 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 
     <!-- Bootstrap -->
-    <link href="/public/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/static/css/style.css" rel="stylesheet">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,7 +60,7 @@
 
     <div class="container-fluid">
         <div class="indexImg row">
-            <img src="/public/static/image/index.png" width="100%" />
+            <img src="/static/image/index.png" width="100%" />
         </div>
         <div class="serviceList text-center">
             <div class="container">
@@ -126,9 +126,9 @@
     <!-- 底部
     ================================================== -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/public/static/jquery-1.11.2.min.js"></script>
+    <script src="/static/jquery-1.11.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/public/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         (function(){
