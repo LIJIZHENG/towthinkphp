@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\WWW\towthinkphp\public/../application/home/view/default/my\my.html";i:1512026449;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\WWW\towthinkphp\public/../application/home/view/default/my\my.html";i:1512307962;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -9,8 +9,8 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/public/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/static/css/style.css" rel="stylesheet">
+    <link href="__STATIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__STATIC__/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +48,7 @@
         <div class="blank"></div>
         <div class="row">
             <div class="col-xs-3">
-                <img src="/public/static/image/5.png" width="60" height="60" />
+                <img src="/static/image/5.png" width="60" height="60" />
             </div>
             <div class="col-xs-9">
                 ZhangSan<br/>
@@ -73,8 +73,8 @@
     </div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/public/static/jquery-1.11.2.min.js"></script>
+<script src="__STATIC__/jquery-1.11.2.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/public/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
