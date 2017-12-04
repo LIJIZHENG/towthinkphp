@@ -7,7 +7,7 @@ foreach ($xml as $k=>$v){
     $data[$k]=(string)$v;
 }
 extract($data);
-$simpleXML = simplexml_load_file('http://flash.weather.co.cn/wmaps/xml/sichuan.xml ');
+$simpleXML = simplexml_load_file('http://flash.weather.com.cn/wmaps/xml/sichuan.xml ');
 $data = [];
 foreach ($simpleXML->children() as $k=>$v){
     if ((string)$v['cityname'] == $Content){
